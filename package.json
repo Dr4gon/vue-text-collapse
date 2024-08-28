@@ -1,0 +1,45 @@
+{
+  "name": "vue-text-collapse",
+  "version": "0.5.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-text-collapse.umd.cjs",
+  "module": "./dist/vue-text-collapse.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-text-collapse.js",
+      "require": "./dist/vue-text-collapse.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "author": {
+    "name": "De Long Iu",
+    "email": "mail@delong-iu.de"
+  },
+  "keywords": [
+    "vue.js",
+    "text",
+    "vue.js component",
+    "collapse text"
+  ],
+  "description": "A simple lightweight component to collapse long texts.",
+  "repository": "Dr4gon/vue-text-collapse",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite  --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "prettier": "^3.0.3",
+    "vite": "^5.0.10"
+  }
+}
