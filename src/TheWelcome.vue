@@ -10,22 +10,16 @@ export default {
 
 <template>
   <img src="@/assets/team.png" alt="Team" />
-  <WelcomeItem openTarget="team" closeTarget="team">
-    <template #heading>
-      Once upon a time, there was a team that wanted to change the world…
-    </template>
-    <template #summary>
-      <p>
-        In a world teetering on the brink of chaos, where ancient forces and modern technology
-        collide, a new era of heroes emerges, destined to shape the fate of humanity. Brought
-        together by fate and forged in the fires of battle, they are a diverse assembly of
-        extraordinary individuals, each carrying the weight of their own past and the burden of
-        unimaginable power. As dark forces rise from the shadows, these unlikely allies must unite,
-        for only together can they stand against the impending storm and protect the world from
-        annihilation.
-      </p>
-    </template>
-  </WelcomeItem>
+
+  <h3>Once upon a time, there was a team that wanted to change the world…</h3>
+  <p>
+    In a world teetering on the brink of chaos, where ancient forces and modern technology collide,
+    a new era of heroes emerges, destined to shape the fate of humanity. Brought together by fate
+    and forged in the fires of battle, they are a diverse assembly of extraordinary individuals,
+    each carrying the weight of their own past and the burden of unimaginable power. As dark forces
+    rise from the shadows, these unlikely allies must unite, for only together can they stand
+    against the impending storm and protect the world from annihilation.
+  </p>
 
   <WelcomeItem openTarget="journey-starts" closeTarget="journey-starts">
     <template #heading>Where it all began…</template>
