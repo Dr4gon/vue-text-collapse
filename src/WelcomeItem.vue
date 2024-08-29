@@ -10,11 +10,7 @@ export default {
     IconCloseX
   },
   props: {
-    openTarget: {
-      type: String,
-      required: true
-    },
-    closeTarget: {
+    cssTarget: {
       type: String,
       required: true
     }
@@ -22,10 +18,10 @@ export default {
   computed: {
     cssProps() {
       return {
-        'open-x': this.openTarget + '-open-x',
-        'close-x': this.closeTarget + '-close-x',
-        'css-target': this.openTarget + '',
-        'css-placeholder': this.openTarget + '-placeholder'
+        'open-x': this.cssTarget + '-open-x',
+        'close-x': this.cssTarget + '-close-x',
+        'css-target': this.cssTarget + '',
+        'css-placeholder': this.cssTarget + '-placeholder'
       }
     }
   },

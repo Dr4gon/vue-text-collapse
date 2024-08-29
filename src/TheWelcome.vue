@@ -21,7 +21,7 @@ export default {
     against the impending storm and protect the world from annihilation.
   </p>
 
-  <WelcomeItem openTarget="journey-starts" closeTarget="journey-starts">
+  <WelcomeItem cssTarget="journey-starts">
     <template #heading>Where it all began…</template>
     <template #summary>
       <img src="@/assets/journey-start.png" alt="Journey starts" />
@@ -97,7 +97,7 @@ export default {
     </template>
   </WelcomeItem>
 
-  <WelcomeItem openTarget="your-own-pack" closeTarget="your-own-pack">
+  <WelcomeItem cssTarget="your-own-pack">
     <template #heading>Finding our pack—or building one</template>
     <template #summary>
       <img src="@/assets/your-own-pack.png" alt="Your own pack" />
@@ -147,7 +147,7 @@ export default {
     </template>
   </WelcomeItem>
 
-  <WelcomeItem openTarget="building-a-dream" closeTarget="building-a-dream">
+  <WelcomeItem cssTarget="building-a-dream">
     <template #heading>Creating the dream team, to build state-of-the-art products</template>
     <template #summary>
       <img src="@/assets/building-a-dream.png" alt="Building a dream" />
