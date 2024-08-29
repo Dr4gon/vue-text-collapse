@@ -32,17 +32,18 @@ export default {
   methods: {
     toggleVisibility() {
       this.hideElement(this.cssProps['css-target'])
-      this.showElement(this.cssProps['openX'])
-      this.hideElement(this.cssProps['closeX'])
+      this.showElement(this.cssProps['open-x'])
+      this.hideElement(this.cssProps['close-x'])
       this.showElement(this.cssProps['css-placeholder'])
     },
     hideElement(classTarget) {
       const div = document.querySelector(`.${classTarget}`)
-      console.log(div)
+      console.log('hidiing', div)
       div.style.display = div.style.display === 'block' ? 'none' : 'block'
     },
     showElement(classTarget) {
       const div = document.querySelector(`.${classTarget}`)
+      console.log('Shoooowing', div)
       div.style.display = div.style.display === 'none' ? 'block' : 'none'
     }
   }
@@ -54,12 +55,12 @@ export default {
     <i>
       <slot name="icon">
         <IconOpenX
-          :class="cssProps['openX']"
+          :class="cssProps['open-x']"
           class="iconOpenX"
           @click.prevent="this.toggleVisibility()"
         />
         <IconCloseX
-          :class="cssProps['closeX']"
+          :class="cssProps['close-x']"
           class="iconCloseX"
           @click.prevent="this.toggleVisibility()"
         />
