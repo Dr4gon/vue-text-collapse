@@ -34,12 +34,10 @@ export default {
     },
     hideElement(classTarget) {
       const div = document.querySelector(`.${classTarget}`)
-      console.log('hidiing', div)
       div.style.display = div.style.display === 'block' ? 'none' : 'block'
     },
     showElement(classTarget) {
       const div = document.querySelector(`.${classTarget}`)
-      console.log('Shoooowing', div)
       div.style.display = div.style.display === 'none' ? 'block' : 'none'
     }
   }
