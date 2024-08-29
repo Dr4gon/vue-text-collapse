@@ -28,9 +28,10 @@ export default {
   </WelcomeItem>
 
   <WelcomeItem openTarget="journey-starts" closeTarget="journey-starts">
-    <img src="@/assets/journey-start.png" alt="Journey starts" />
     <template #heading>Where it all began…</template>
     <template #summary>
+      <img src="@/assets/journey-start.png" alt="Journey starts" />
+
       <p>
         Alright, gather 'round, folks, and let me spin you a yarn about a little movie called The
         Avengers. Now, imagine you've got a bunch of talented athletes—each one a star in their own
@@ -103,9 +104,9 @@ export default {
   </WelcomeItem>
 
   <WelcomeItem openTarget="your-own-pack" closeTarget="your-own-pack">
-    <img src="@/assets/your-own-pack.png" alt="Your own pack" />
     <template #heading>Finding our pack—or building one</template>
     <template #summary>
+      <img src="@/assets/your-own-pack.png" alt="Your own pack" />
       <p>
         Alrighty, folks, gather 'round, 'cause I'm about to tell ya a tale of teamwork, heart, and a
         little bit of metal mayhem. So, here we are in the second go-round with our favorite group
@@ -153,9 +154,9 @@ export default {
   </WelcomeItem>
 
   <WelcomeItem openTarget="building-a-dream" closeTarget="building-a-dream">
-    <img src="@/assets/building-a-dream.png" alt="Building a dream" />
     <template #heading>Creating the dream team, to build state-of-the-art products</template>
     <template #summary>
+      <img src="@/assets/building-a-dream.png" alt="Building a dream" />
       <p>
         Alright, team, gather 'round because we've got ourselves a humdinger of a story to tell.
         Imagine this: you’ve got your team of superheroes, right? A real band of misfits who’ve
