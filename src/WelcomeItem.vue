@@ -1,9 +1,50 @@
 <script>
 import IconDefault from './icons/IconDefault.vue'
+import IconOpenX from './icons/IconOpenX.vue'
+import IconCloseX from './icons/IconCloseX.vue'
 
 export default {
   components: {
-    IconOpen: IconDefault
+    IconDefault,
+    IconOpenX,
+    IconCloseX
+  },
+  props: {
+    openTarget: {
+      type: String,
+      required: true
+    },
+    closeTarget: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    cssProps() {
+      return {
+        'open-x': this.openTarget + '-open-x',
+        'close-x': this.closeTarget + '-close-x',
+        'css-target': this.openTarget + '',
+        'css-placeholder': this.openTarget + '-placeholder'
+      }
+    }
+  },
+  methods: {
+    toggleVisibility() {
+      this.hideElement(this.cssProps['css-target'])
+      this.showElement(this.cssProps['openX'])
+      this.hideElement(this.cssProps['closeX'])
+      this.showElement(this.cssProps['css-placeholder'])
+    },
+    hideElement(classTarget) {
+      const div = document.querySelector(`.${classTarget}`)
+      console.log(div)
+      div.style.display = div.style.display === 'block' ? 'none' : 'block'
+    },
+    showElement(classTarget) {
+      const div = document.querySelector(`.${classTarget}`)
+      div.style.display = div.style.display === 'none' ? 'block' : 'none'
+    }
   }
 }
 </script>
@@ -12,7 +53,16 @@ export default {
   <div class="item">
     <i>
       <slot name="icon">
-        <IconOpen />
+        <IconOpenX
+          :class="cssProps['openX']"
+          class="iconOpenX"
+          @click.prevent="this.toggleVisibility()"
+        />
+        <IconCloseX
+          :class="cssProps['closeX']"
+          class="iconCloseX"
+          @click.prevent="this.toggleVisibility()"
+        />
       </slot>
     </i>
     <div class="details">
@@ -20,12 +70,28 @@ export default {
         <slot name="heading"></slot>
       </h3>
 
-      <slot></slot>
+      <slot name="summary"></slot>
+      <p :class="cssProps['css-placeholder']">.........</p>
+      <div :class="cssProps['css-target']" class="startInvisible">
+        <slot name="fullText"></slot>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.startInvisible {
+  display: none;
+}
+
+.iconOpenX {
+  display: block;
+}
+
+.iconCloseX {
+  display: none;
+}
+
 li {
   color: aquamarine;
   font-family: Verdana, Geneva, Tahoma, sans-serif;

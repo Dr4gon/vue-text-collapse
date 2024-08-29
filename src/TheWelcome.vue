@@ -1,75 +1,49 @@
 <script>
 import WelcomeItem from './WelcomeItem.vue'
-import IconOpenX from './icons/IconOpenX.vue'
-import IconCloseX from './icons/IconCloseX.vue'
 
 export default {
   components: {
-    WelcomeItem,
-    IconOpenX,
-    IconCloseX
-  },
-  methods: {
-    toggleVisibility(classTarget) {
-      this.hideElement(`${classTarget}`)
-      this.showElement(`${classTarget}-open-x`)
-      this.hideElement(`${classTarget}-close-x`)
-      this.showElement(`${classTarget}-placeholder`)
-    },
-    hideElement(classTarget) {
-      const div = document.querySelector(`.${classTarget}`)
-      div.style.display = div.style.display === 'block' ? 'none' : 'block'
-    },
-    showElement(classTarget) {
-      const div = document.querySelector(`.${classTarget}`)
-      div.style.display = div.style.display === 'none' ? 'block' : 'none'
-    }
+    WelcomeItem
   }
 }
 </script>
 
 <template>
   <img src="@/assets/team.png" alt="Team" />
-  <WelcomeItem>
+  <WelcomeItem openTarget="team" closeTarget="team">
     <template #heading>
       Once upon a time, there was a team that wanted to change the world…
     </template>
-
-    <p>
-      In a world teetering on the brink of chaos, where ancient forces and modern technology
-      collide, a new era of heroes emerges, destined to shape the fate of humanity. Brought together
-      by fate and forged in the fires of battle, they are a diverse assembly of extraordinary
-      individuals, each carrying the weight of their own past and the burden of unimaginable power.
-      As dark forces rise from the shadows, these unlikely allies must unite, for only together can
-      they stand against the impending storm and protect the world from annihilation.
-    </p>
+    <template #summary>
+      <p>
+        In a world teetering on the brink of chaos, where ancient forces and modern technology
+        collide, a new era of heroes emerges, destined to shape the fate of humanity. Brought
+        together by fate and forged in the fires of battle, they are a diverse assembly of
+        extraordinary individuals, each carrying the weight of their own past and the burden of
+        unimaginable power. As dark forces rise from the shadows, these unlikely allies must unite,
+        for only together can they stand against the impending storm and protect the world from
+        annihilation.
+      </p>
+    </template>
   </WelcomeItem>
 
-  <WelcomeItem>
-    <template #icon>
-      <IconOpenX
-        class="journey-starts-open-x"
-        @click.prevent="toggleVisibility('journey-starts')"
-      />
-      <IconCloseX
-        class="journey-starts-close-x"
-        @click.prevent="toggleVisibility('journey-starts')"
-      />
-    </template>
+  <WelcomeItem openTarget="journey-starts" closeTarget="journey-starts">
     <img src="@/assets/journey-start.png" alt="Journey starts" />
     <template #heading>Where it all began…</template>
-    <p>
-      Alright, gather 'round, folks, and let me spin you a yarn about a little movie called The
-      Avengers. Now, imagine you've got a bunch of talented athletes—each one a star in their own
-      right—but they’re all playing different sports. You got your Iron Man over here, who’s the
-      flashy quarterback, Captain America, the solid, all-American linebacker, and don’t even get me
-      started on Thor, who’s like a big ol’ Nordic rugby player with a hammer for a ball. Then
-      there’s the Hulk, who’s basically a one-man wrecking crew, Black Widow, the slick striker who
-      can take out an entire defense with a single move, and Hawkeye, the archer who’s basically a
-      sharpshooter in cleats. But here’s the kicker—these folks have never played together before!
-    </p>
-    <p class="journey-starts-placeholder">.........</p>
-    <div class="journey-starts">
+    <template #summary>
+      <p>
+        Alright, gather 'round, folks, and let me spin you a yarn about a little movie called The
+        Avengers. Now, imagine you've got a bunch of talented athletes—each one a star in their own
+        right—but they’re all playing different sports. You got your Iron Man over here, who’s the
+        flashy quarterback, Captain America, the solid, all-American linebacker, and don’t even get
+        me started on Thor, who’s like a big ol’ Nordic rugby player with a hammer for a ball. Then
+        there’s the Hulk, who’s basically a one-man wrecking crew, Black Widow, the slick striker
+        who can take out an entire defense with a single move, and Hawkeye, the archer who’s
+        basically a sharpshooter in cleats. But here’s the kicker—these folks have never played
+        together before!
+      </p>
+    </template>
+    <template #fullText>
       <p>
         The story kicks off when Loki, who’s Thor’s adopted brother and a bit of a trickster—imagine
         the guy who always pulls pranks in the locker room but with way more malice—decides he’s
@@ -125,28 +99,22 @@ export default {
         believing that when we come together, there’s no challenge too big, no villain too tough,
         and no city too far gone to save.
       </p>
-    </div>
+    </template>
   </WelcomeItem>
 
-  <WelcomeItem>
-    <template #icon>
-      <IconOpenX class="your-own-pack-open-x" @click.prevent="toggleVisibility('your-own-pack')" />
-      <IconCloseX
-        class="your-own-pack-close-x"
-        @click.prevent="toggleVisibility('your-own-pack')"
-      />
-    </template>
+  <WelcomeItem openTarget="your-own-pack" closeTarget="your-own-pack">
     <img src="@/assets/your-own-pack.png" alt="Your own pack" />
     <template #heading>Finding our pack—or building one</template>
-    <p>
-      Alrighty, folks, gather 'round, 'cause I'm about to tell ya a tale of teamwork, heart, and a
-      little bit of metal mayhem. So, here we are in the second go-round with our favorite group of
-      super pals in Avengers: Age of Ultron. Now, imagine you’ve got this team—full of big
-      personalities and even bigger hearts—trying to make the world a better place, one punch, kick,
-      and clever quip at a time.
-    </p>
-    <p class="your-own-pack-placeholder">.........</p>
-    <div class="your-own-pack">
+    <template #summary>
+      <p>
+        Alrighty, folks, gather 'round, 'cause I'm about to tell ya a tale of teamwork, heart, and a
+        little bit of metal mayhem. So, here we are in the second go-round with our favorite group
+        of super pals in Avengers: Age of Ultron. Now, imagine you’ve got this team—full of big
+        personalities and even bigger hearts—trying to make the world a better place, one punch,
+        kick, and clever quip at a time.
+      </p>
+    </template>
+    <template #fullText>
       <p>
         But then, uh-oh, Tony Stark, that lovable rascal with a heart of gold and a brain that’s
         always working overtime, accidentally cooks up a new problem while trying to solve an old
@@ -181,33 +149,24 @@ export default {
         Avengers for showing us that with a little grit, determination, and a whole lot of love, you
         can face down just about any challenge—no matter how metal and menacing it might be.
       </p>
-    </div>
+    </template>
   </WelcomeItem>
 
-  <WelcomeItem>
-    <template #icon>
-      <IconOpenX
-        class="building-a-dream-open-x"
-        @click.prevent="toggleVisibility('building-a-dream')"
-      />
-      <IconCloseX
-        class="building-a-dream-close-x"
-        @click.prevent="toggleVisibility('building-a-dream')"
-      />
-    </template>
+  <WelcomeItem openTarget="building-a-dream" closeTarget="building-a-dream">
     <img src="@/assets/building-a-dream.png" alt="Building a dream" />
     <template #heading>Creating the dream team, to build state-of-the-art products</template>
-    <p>
-      Alright, team, gather 'round because we've got ourselves a humdinger of a story to tell.
-      Imagine this: you’ve got your team of superheroes, right? A real band of misfits who’ve saved
-      the world a couple of times already. They’re basically the Premier League of butt-kicking.
-      Now, just when you think they can’t get any bigger or better, along comes this purple fella
-      named Thanos. He’s got a chin that could grate cheese and a mission to collect these shiny
-      little knick-knacks called Infinity Stones. And lemme tell ya, these stones? They're more
-      powerful than a full cup of Earl Grey on a chilly morning.
-    </p>
-    <p class="building-a-dream-placeholder">.........</p>
-    <div class="building-a-dream">
+    <template #summary>
+      <p>
+        Alright, team, gather 'round because we've got ourselves a humdinger of a story to tell.
+        Imagine this: you’ve got your team of superheroes, right? A real band of misfits who’ve
+        saved the world a couple of times already. They’re basically the Premier League of
+        butt-kicking. Now, just when you think they can’t get any bigger or better, along comes this
+        purple fella named Thanos. He’s got a chin that could grate cheese and a mission to collect
+        these shiny little knick-knacks called Infinity Stones. And lemme tell ya, these stones?
+        They're more powerful than a full cup of Earl Grey on a chilly morning.
+      </p>
+    </template>
+    <template #fullText>
       <p>
         Now, Thanos, bless his heart, thinks he’s doing the right thing by trying to wipe out half
         the universe. Something about balance, like a teeter-totter, but the stakes are just a tad
@@ -229,7 +188,7 @@ export default {
         seem bleak, there’s always a comeback waiting around the corner. Now, who’s up for a round
         of biscuits?
       </p>
-    </div>
+    </template>
   </WelcomeItem>
 </template>
 
@@ -237,21 +196,5 @@ export default {
 img {
   padding: 6rem;
   justify-content: center;
-}
-
-div {
-  display: none;
-}
-
-.journey-starts-open-x,
-.your-own-pack-open-x,
-.building-a-dream-open-x {
-  display: block;
-}
-
-.journey-starts-close-x,
-.your-own-pack-close-x,
-.building-a-dream-close-x {
-  display: none;
 }
 </style>
