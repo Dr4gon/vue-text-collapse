@@ -35,10 +35,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue3": "^3.3.11"
+    "vue": "^3.3.11"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue3": "^4.5.2",
+    "@vitejs/plugin-vue": "^4.5.2",
     "prettier": "^3.0.3",
     "vite": "^5.0.10"
   }
