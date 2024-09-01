@@ -1,9 +1,9 @@
 <script>
-import WelcomeItem from './WelcomeItem.vue'
+import TextCollapse from './TextCollapse.vue'
 
 export default {
   components: {
-    WelcomeItem
+    TextCollapse: TextCollapse
   }
 }
 </script>
@@ -21,7 +21,7 @@ export default {
     against the impending storm and protect the world from annihilation.
   </p>
 
-  <WelcomeItem cssTarget="journey-starts">
+  <TextCollapse cssTarget="journey-starts">
     <template #heading>Where it all began…</template>
     <template #summary>
       <img src="@/assets/journey-start.png" alt="Journey starts" />
@@ -95,9 +95,9 @@ export default {
         and no city too far gone to save.
       </p>
     </template>
-  </WelcomeItem>
+  </TextCollapse>
 
-  <WelcomeItem cssTarget="your-own-pack">
+  <TextCollapse cssTarget="your-own-pack">
     <template #heading>Finding our pack—or building one</template>
     <template #summary>
       <img src="@/assets/your-own-pack.png" alt="Your own pack" />
@@ -145,9 +145,9 @@ export default {
         can face down just about any challenge—no matter how metal and menacing it might be.
       </p>
     </template>
-  </WelcomeItem>
+  </TextCollapse>
 
-  <WelcomeItem cssTarget="building-a-dream">
+  <TextCollapse cssTarget="building-a-dream">
     <template #heading>Creating the dream team, to build state-of-the-art products</template>
     <template #summary>
       <img src="@/assets/building-a-dream.png" alt="Building a dream" />
@@ -184,7 +184,7 @@ export default {
         of biscuits?
       </p>
     </template>
-  </WelcomeItem>
+  </TextCollapse>
 </template>
 
 <style scoped>
