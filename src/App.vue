@@ -1,10 +1,10 @@
 <script>
-import TheWelcome from '@/TheWelcome.vue'
+import TheStory from '@/TheStory.vue'
 
 export default {
   name: 'App',
   components: {
-    TheWelcome
+    TheStory: TheStory
   },
   data() {
     return {
@@ -28,7 +28,7 @@ export default {
   </header>
   <main>
     <Suspense>
-      <TheWelcome />
+      <TheStory />
     </Suspense>
   </main>
 </template>
