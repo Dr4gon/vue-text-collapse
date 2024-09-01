@@ -1,5 +1,5 @@
 <script>
-import TextCollapse from './TextCollapse.vue'
+import TextCollapse from '../lib/TextCollapse.vue'
 
 export default {
   components: {
