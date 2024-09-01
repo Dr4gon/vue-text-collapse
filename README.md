@@ -8,6 +8,67 @@ A simple lightweight component to collapse long texts.
 
 ## Setup
 
+Business as usual by running
+
+```sh
+npm i vue-text-collapse
+```
+
+and integrating it directly into your .vue file.
+
+```js
+<script>
+import { TextCollapse } from 'vue-text-collapse'
+import 'vue-text-collapse/dist/style.css'
+
+// some other code
+</script>
+```
+
+Remember to register it with the components.
+
+```js
+<script>
+// some imports
+
+export default {
+  components: {
+    TextCollapse
+  },
+
+// some other code
+</script>
+```
+
+And then configure __cssTarget__, the content within the corresponding templates, and that's it.
+
+```js
+<TextCollapse cssTarget="css-target-for-collapse-to-work">
+  <template #heading>This is how it goes</template>
+  <template #summary>
+    <img src="@/assets/your-image.png" alt="your image name" />
+    <p>
+      Come to the point.
+    </p>
+  </template>
+  <template #fullText>
+    <p>
+      Whatever long text you desire and in whatever format you like because the templates insert it with the HTML code.
+    </p>
+  </template>
+</TextCollapse>
+```
+
+Fully working code example based on the vue.js generated template app included in the [repository](https://github.com/Dr4gon/vue-text-collapse).
+
+```sh
+npm i 
+```
+
+```sh
+npm run dev
+```
+
 ## Contributions
 
 Any kind of requests, bugs, and so on and so forth, [write a ticket](https://github.com/Dr4gon/vue-text-collapse/issues/new).
