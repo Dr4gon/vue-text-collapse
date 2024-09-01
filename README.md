@@ -75,8 +75,8 @@ Any kind of requests, bugs, and so on and so forth, [write a ticket](https://git
 
 ## Status
 
-- [ ] Configure build process so dependency can be used
-- [ ] Write proper docu
+- [x] Configure build process so dependency can be used
+- [x] Write proper docu
 - [ ] Clean out code
 - [ ] Replace icons with shiny new ones
 - [ ] Adjust position of collapse button
