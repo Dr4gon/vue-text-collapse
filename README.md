@@ -1,6 +1,10 @@
 # vue-text-collapse
 
-A simple lightweight component to collapse long texts
+A simple lightweight component to collapse long texts.
+
+## Demo
+
+![Alt Text](demo.gif)
 
 ## Setup
 
@@ -16,7 +20,7 @@ Any kind of requests, bugs, and so on and so forth, [write a ticket](https://git
 - [ ] Replace icons with shiny new ones
 - [ ] Adjust position of collapse button
 - [ ] Make buttons configurable
-- [ ] Provide generic solution to insert the texts (maybe using properties)
+- [x] Provide generic solution to insert the texts (~~maybe using properties~~ using vue.js templates)
 - [ ] Meet Wade Wilson ake Ryan Reynolds in RL and joke around a lot
 - [ ] Don't let Infinity Gauntlet lie around uselessy
 - [ ] Feed Pool-Dog
