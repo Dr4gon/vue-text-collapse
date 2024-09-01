@@ -1,4 +1,4 @@
-# vue-text-collapse
+# vue3-text-collapse
 
 A simple lightweight component to collapse long texts.
 
@@ -11,15 +11,15 @@ A simple lightweight component to collapse long texts.
 Business as usual by running
 
 ```sh
-npm i vue-text-collapse
+npm i vue3-text-collapse
 ```
 
 and integrating it directly into your .vue file.
 
 ```js
 <script>
-import { TextCollapse } from 'vue-text-collapse'
-import 'vue-text-collapse/dist/style.css'
+import { TextCollapse } from 'vue3-text-collapse'
+import 'vue3-text-collapse/dist/style.css'
 
 // some other code
 </script>
