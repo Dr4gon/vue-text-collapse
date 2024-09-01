@@ -16,9 +16,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/main.js'),
-      name: 'vue-text-collapse',
+      name: 'vue3-text-collapse',
       // the proper extensions will be added
-      fileName: 'vue-text-collapse'
+      fileName: 'vue3-text-collapse'
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

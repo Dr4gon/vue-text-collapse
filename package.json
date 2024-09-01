@@ -1,16 +1,16 @@
 {
-  "name": "vue-text-collapse",
+  "name": "vue3-text-collapse",
   "version": "0.5.0",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-text-collapse.umd.cjs",
-  "module": "./dist/vue-text-collapse.js",
+  "main": "./dist/vue3-text-collapse.umd.cjs",
+  "module": "./dist/vue3-text-collapse.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-text-collapse.js",
-      "require": "./dist/vue-text-collapse.js"
+      "import": "./dist/vue3-text-collapse.js",
+      "require": "./dist/vue3-text-collapse.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -35,10 +35,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.3.11"
+    "vue3": "^3.3.11"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue3": "^4.5.2",
     "prettier": "^3.0.3",
     "vite": "^5.0.10"
   }
