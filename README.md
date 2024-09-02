@@ -78,6 +78,7 @@ Any kind of requests, bugs, and so on and so forth, [write a ticket](https://git
 - [x] Configure build process so dependency can be used
 - [x] Write proper docu
 - [ ] Clean out code
+- [ ] Move cssTarget into component and auto-generate with fun names
 - [ ] Replace icons with shiny new ones
 - [ ] Adjust position of collapse button
 - [ ] Make buttons configurable
