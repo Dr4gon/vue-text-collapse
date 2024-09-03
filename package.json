@@ -19,10 +19,15 @@
     "email": "mail@delong-iu.de"
   },
   "keywords": [
-    "vue.js",
+    "vue",
+    "vuejs",
     "text",
-    "vue.js component",
-    "collapse text"
+    "collapse",
+    "expand",
+    "read more",
+    "read less",
+    "show text",
+    "hide text"
   ],
   "description": "A simple lightweight component to collapse long texts.",
   "repository": "Dr4gon/vue-text-collapse",
