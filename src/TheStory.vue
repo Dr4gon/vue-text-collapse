@@ -189,7 +189,7 @@ export default {
 
 <style scoped>
 img {
-  padding: 6rem;
+  padding: 6vw;
   justify-content: center;
 }
 </style>
